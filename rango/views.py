@@ -65,6 +65,7 @@ def show_category(request, category_name_slug):
 	# Go render the response and return it to the client.
 	return render(request,'rango/category.html', context=context_dict)
 
+@login_required
 def add_category(request):
 	form = CategoryForm()
 	
